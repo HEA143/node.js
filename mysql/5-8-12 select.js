@@ -12,13 +12,16 @@ app.get('/', function (req, res) {
         database: process.env.DATABASE,
     });
 
-connection.query(
-    'SELECT * FROM topic',
-    function(err, results, fields) {
-        res.send(err);
-        console.log(results);
-        console.log(fields);
-    });    
+    let body = '<h1>single row</h1>';
+    connection.query(
+        'SELECT * FROM topic WHERE id = 5',
+        function(err, results, fields) {
+            let row = results[0];
+            body += row.title;
+            res.send(body);
+            console.log(results);
+            console.log(fields);
+        });      
 });
 
 app.listen(3000, function() {
