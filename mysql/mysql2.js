@@ -5,7 +5,7 @@ const mysql = require('mysql2'); // npm install mysql2
 const connection = mysql.createConnection({
   host: '172.25.192.1',
   user: 'joe',
-  password: 'black', 
+  password: 'black',
   database: 'opentutorials'
 });
 
