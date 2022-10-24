@@ -1,5 +1,5 @@
 class List {
-  constructor(...args) { // ...은 가변 파라미터를 배열로 받는다.
+  constructor(...args) { // ...변수는 가변 파라미터를 배열로 받는다.
     this.length = args.length;
     for(let i in args) { // for in문은 모든 인덱스에 대해 순서대로 반복
       this[i] = args[i];
