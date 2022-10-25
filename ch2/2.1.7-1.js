@@ -1,4 +1,4 @@
-const condition = true; // true면 resolve, false면 reject
+const condition = Math.random() < 0.5; // true면 resolve, false면 reject
 const promise = new Promise((resolve, reject) => {
   if (condition) {
     resolve('성공');
@@ -6,6 +6,7 @@ const promise = new Promise((resolve, reject) => {
     reject('실패');
   }
 });
+// 다른 코드가 들어갈 수 있음
 promise
   .then((message) => {
     console.log(message); // 성공(resolve)한 경우 실행
