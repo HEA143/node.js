@@ -1,0 +1,10 @@
+<script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+<script>
+  $.get('https://www.zerocho.com/api/get')
+    .done((data) => {
+      console.log(data); // {}
+    })
+    .fail((error) => {
+      console.error(error);
+    });
+</script>
