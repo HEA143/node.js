@@ -7,8 +7,9 @@
     {
       "name": "Launch",
       "request": "launch",
-      "runtimeArgs": ["${workspaceFolder}/.vscode/launch.sh", "${relativeFile}"],
+      "runtimeArgs": ["${workspaceFolder}/.vscode/launch.sh", "${file}"],
       "runtimeExecutable": "bash",
+      "cwd": "${fileDirname}",
       "skipFiles": ["<node_internals>/**"],
       "type": "node"
     }
